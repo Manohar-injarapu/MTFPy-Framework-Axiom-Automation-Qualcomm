@@ -1,47 +1,23 @@
 # MTFPy-Framework-Axiom-Automation-Qualcomm
 Modem Test framework with execution platform in Axiom 
 
-mtfpy-framework/
-│
-├── config/ # Configuration files (devices, network, env)
-│ ├── device_config.json
-│ ├── network_config.json
-│
-├── test_cases/ # All test scripts
-│ ├── test_call.py
-│ ├── test_data.py
-│ ├── test_sms.py
-│
-├── libraries/ # Reusable functions / utilities
-│ ├── modem_lib.py
-│ ├── network_lib.py
-│ ├── adb_lib.py
-│
-├── drivers/ # Device interfaces (ADB, QXDM, AT commands)
-│ ├── adb_driver.py
-│ ├── at_driver.py
-│
-├── keywords/ # High-level reusable keywords
-│ ├── call_keywords.py
-│ ├── data_keywords.py
-│
-├── logs/ # Execution logs
-│ ├── run.log
-│
-├── reports/ # Test reports
-│ ├── report.html
-│ ├── result.xml
-│
-├── utils/ # Helper utilities
-│ ├── logger.py
-│ ├── parser.py
-│
-├── test_data/ # Input data for test cases
-│ ├── test_data.json
-│
-├── main.py # Test runner / entry point
-├── requirements.txt # Dependencies
-└── README.md
+## 🔄 Execution Flow
+
+main.py
+   ↓
+Load Config
+   ↓
+Initialize Device
+   ↓
+Execute Test Cases
+   ↓
+Keywords Layer
+   ↓
+Libraries Layer
+   ↓
+Drivers (ADB / AT)
+   ↓
+Logs & Reports
 
 
 ->Key Components
@@ -122,6 +98,49 @@ Axiom handles:
 Device allocation
 Network simulation
 Log collection & reporting
+
+
+
+mtfpy-framework/
+│
+├── config/                # Stores device & network settings (YAML files)
+│   ├── device_config.yaml
+│   ├── network_config.yaml
+│
+├── test_cases/            # Contains all test scripts (call, data, SMS)
+│   ├── test_call.py
+│   ├── test_data.py
+│   ├── test_sms.py
+│
+├── libraries/             # Reusable core functions (modem, network, ADB)
+│   ├── modem_lib.py
+│   ├── network_lib.py
+│   ├── adb_lib.py
+│
+├── drivers/               # Low-level device communication (ADB, AT commands)
+│   ├── adb_driver.py
+│   ├── at_driver.py
+│
+├── keywords/              # High-level reusable actions (like "make_call")
+│   ├── call_keywords.py
+│   ├── data_keywords.py
+│
+├── logs/                  # Stores execution logs for debugging
+│   ├── run.log
+│
+├── reports/               # Stores test results (HTML/XML reports)
+│   ├── report.html
+│   ├── result.xml
+│
+├── utils/                 # Helper functions (logging, parsing, etc.)
+│   ├── logger.py
+│   ├── parser.py
+│
+├── test_data/             # Input test data (JSON, CSV, etc.)
+│   ├── test_data.json
+│
+├── main.py                # Entry point to run all tests
+├── requirements.txt       # Python dependencies
 
 
 “MTFPy provides the Python-based automation layer for writing modem test cases, while Qualcomm Axiom acts as the execution and orchestration platform that manages devices, logs, and reporting.”
