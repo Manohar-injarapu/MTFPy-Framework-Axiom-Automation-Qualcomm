@@ -3,47 +3,45 @@ Modem Test framework with execution platform in Axiom
 
 mtfpy-framework/
 │
-├── config/                # Configuration files (devices, network, env)
-│   ├── device_config.yaml
-│   ├── network_config.yaml
+├── config/ # Configuration files (devices, network, env)
+│ ├── device_config.json
+│ ├── network_config.json
 │
-├── test_cases/            # All test scripts
-│   ├── test_call.py
-│   ├── test_data.py
-│   ├── test_sms.py
+├── test_cases/ # All test scripts
+│ ├── test_call.py
+│ ├── test_data.py
+│ ├── test_sms.py
 │
-├── libraries/             # Reusable functions / utilities
-│   ├── modem_lib.py
-│   ├── network_lib.py
-│   ├── adb_lib.py
+├── libraries/ # Reusable functions / utilities
+│ ├── modem_lib.py
+│ ├── network_lib.py
+│ ├── adb_lib.py
 │
-├── drivers/               # Device interfaces (ADB, QXDM, AT commands)
-│   ├── adb_driver.py
-│   ├── at_driver.py
+├── drivers/ # Device interfaces (ADB, QXDM, AT commands)
+│ ├── adb_driver.py
+│ ├── at_driver.py
 │
-├── keywords/              # High-level reusable keywords (like Robot Framework)
-│   ├── call_keywords.py
-│   ├── data_keywords.py
+├── keywords/ # High-level reusable keywords
+│ ├── call_keywords.py
+│ ├── data_keywords.py
 │
-├── logs/                  # Execution logs
-│   ├── run.log
+├── logs/ # Execution logs
+│ ├── run.log
 │
-├── reports/               # Test reports
-│   ├── report.html
-│   ├── result.xml
+├── reports/ # Test reports
+│ ├── report.html
+│ ├── result.xml
 │
-├── utils/                 # Helper utilities
-│   ├── logger.py
-│   ├── parser.py
+├── utils/ # Helper utilities
+│ ├── logger.py
+│ ├── parser.py
 │
-├── test_data/             # Input data for test cases
-│   ├── test_data.json
+├── test_data/ # Input data for test cases
+│ ├── test_data.json
 │
-├── main.py                # Test runner / entry point
-├── requirements.txt       # Dependencies
+├── main.py # Test runner / entry point
+├── requirements.txt # Dependencies
 └── README.md
-
-
 
 
 ->Key Components
